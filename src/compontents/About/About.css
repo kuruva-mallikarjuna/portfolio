@@ -1,0 +1,130 @@
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0% { background: linear-gradient(135deg, #0d1236, #10173f); }
+  25% { background: linear-gradient(135deg, #233092, #7285f1); }
+  50% { background: linear-gradient(135deg, #1f2937, #3b82f6); }
+  75% { background: linear-gradient(135deg, #0d1236, #7285f1); }
+  100% { background: linear-gradient(135deg, #0d1236, #10173f); }
+}
+
+
+.about-section {
+  text-align: center;
+  padding: 50px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  max-width: 900px;
+  min-height: 400px;
+  margin: 50px auto;
+  background: linear-gradient(135deg, #0d1236, #10173f);
+  color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.8s ease forwards, gradientShift 15s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+
+.about-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.2s;
+}
+
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #61dafb;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.5s;
+}
+
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.8s;
+}
+
+
+.about-card {
+  padding: 20px 25px;
+  border-radius: 14px;
+  min-width: 220px;
+  max-width: 250px;
+  text-align: center;
+  color: #0f0e0e;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: gradientShift 10s ease infinite; 
+}
+
+.about-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #3b82f6; 
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #161515;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 15px;
+    min-height: 450px;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-container {
+    gap: 15px;
+  }
+
+  .about-card {
+    min-width: 180px;
+    padding: 15px 20px;
+  }
+
+  .about-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+  }
+}

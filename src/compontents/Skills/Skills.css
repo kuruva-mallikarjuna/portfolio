@@ -1,0 +1,116 @@
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientShift {
+  0% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+  25% { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+  50% { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+  75% { background: linear-gradient(135deg, #84fab0, #8fd3f4); }
+  100% { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+}
+
+.skills-section {
+  text-align: center;
+  padding: 50px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  max-width: 900px;
+  min-height: 400px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(135deg, #233092, #7285f1);
+  animation: fadeInUp 0.8s ease forwards, gradientShift 15s ease infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+
+.skill-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.2s;
+}
+
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #61dafb;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.5s;
+}
+
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards 0.8s;
+}
+
+
+.skill-card {
+  padding: 20px 30px;
+  border-radius: 14px;
+  font-weight: bold;
+  color: #0e0d0d;
+  min-width: 120px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: gradientShift 10s ease infinite; 
+}
+
+.skill-card.html { background: #e34c26; }
+.skill-card.css { background: #264de4; }
+.skill-card.javas { background: #f0db4f; color: #000; }
+.skill-card.react { background: #61dafb; color: #000; }
+.skill-card.sql { background: #00758f; }
+
+
+.skill-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 15px;
+    min-height: 450px;
+  }
+
+  .skills-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .skills-container {
+    gap: 15px;
+  }
+
+  .skill-card {
+    min-width: 90px;
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  .skill-nav {
+    justify-content: center;
+  }
+}
