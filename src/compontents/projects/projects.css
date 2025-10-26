@@ -84,7 +84,7 @@
 
 .project-card p {
   font-size: 1rem;
-  color: #e0e0e0;
+  color: #0e0d0d;
 }
 
 .project-card:hover {
@@ -108,7 +108,7 @@
   font-size: 0.95rem;
   cursor: pointer;
   text-decoration: none;
-  color: #fff;
+  color: #524d4d;
   display: inline-block;
   background: linear-gradient(135deg, #3b82f6, #61dafb);
   animation: fadeInUp 0.8s ease forwards, gradientShift 12s ease infinite;

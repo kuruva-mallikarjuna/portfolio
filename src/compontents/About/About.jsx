@@ -10,7 +10,7 @@ export default function About() {
       <div className="about-container">
         <div className="about-card">
           <h3>B.Tech - ECE</h3>
-          <p>CGPA: 7.0 | Year of Passing: 2025</p>
+          <p>CGPA: 7.0 | 2021 - 2025</p>
         </div>
         <div className="about-card">
           <h3>Intermediate - MPC</h3>
@@ -18,7 +18,7 @@ export default function About() {
         </div>
         <div className="about-card">
           <h3>10th Standard</h3>
-          <p>CGPA: 8.2 | Year: 2019</p>
+          <p>CGPA: 8.2 | 2018 - 2019</p>
         </div>
       </div>
     </section>

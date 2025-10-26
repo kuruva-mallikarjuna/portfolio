@@ -32,7 +32,8 @@ export default function Home() {
             <a href="https://github.com/kuruva-mallikarjuna" target="_blank" rel="noopener noreferrer">
               <FaGithub />  
             </a>
-            <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/kuruva-malli-02a644265/
+" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
           </div></h2>

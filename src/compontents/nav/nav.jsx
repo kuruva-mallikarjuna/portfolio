@@ -1,18 +1,45 @@
-import { Link } from 'react-router-dom';
-import './Nav.css';
+import { Link, useLocation } from "react-router-dom";
+import "./Nav.css";
 
 export default function Nav() {
+  const location = useLocation();
+
   return (
     <nav className="navbar">
       <div className="logo">Portfolio</div>
+
       <ul className="nav-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/skills">Skills</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        {["Home", "About", "Skills", "Projects", "Contact"].map((item) => {
+          const path = item === "Home" ? "/" : `/${item.toLowerCase()}`;
+          const isActive = location.pathname === path;
+
+          return (
+            <li key={item}>
+              <Link to={path} className={isActive ? "active" : ""}>
+                {item}
+              </Link>
+            </li>
+          );
+        })}
+
+        <li>
+          <a
+            href="/Mallikuruva-resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
+        </li>
       </ul>
-      <button className="download-btn">Download CV</button>
+
+      <a
+        href="/Mallikuruva-resume.pdf"
+        download="Mallikuruva-Resume.pdf"
+        className="download-btn"
+      >
+         Download CV
+      </a>
     </nav>
   );
 }
